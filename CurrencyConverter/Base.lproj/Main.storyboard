@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k1m-Hs-2ga">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="louis-george-cafe.bold.ttf">
+            <string>LouisGeorgeCafe-Bold</string>
+        </array>
+        <array key="louis-george-cafe.regular.ttf">
+            <string>LouisGeorgeCafe</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Currency Converter View Controller-->
+        <scene sceneID="9vv-LR-rJn">
+            <objects>
+                <viewController id="0RT-bc-UQu" customClass="CurrencyConverterViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J7L-FQ-2ks">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topBlueBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-mP-sP2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="492"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-rI-1ce">
+                                <rect key="frame" x="20" y="251.5" width="374" height="275"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yI4-vE-kJl">
+                                        <rect key="frame" x="167" y="57.5" width="187" height="130"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter currency" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-zk-MTq">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="55"/>
+                                                <color key="backgroundColor" red="0.38823529411764707" green="0.56862745098039214" blue="1" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="0.38823529411764707" green="0.56862745098039214" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Result" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGi-6J-hcw">
+                                                <rect key="frame" x="0.0" y="75" width="187" height="55"/>
+                                                <color key="backgroundColor" red="0.38823529410000002" green="0.56862745100000001" blue="1" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="0.38823529410000002" green="0.56862745100000001" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWJ-zp-xLT">
+                                        <rect key="frame" x="20" y="70" width="132" height="30"/>
+                                        <fontDescription key="fontDescription" name="LouisGeorgeCafe-Bold" family="Louis George Cafe" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toAction:" destination="0RT-bc-UQu" eventType="touchUpInside" id="gKw-m4-rp6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-1Y-eug">
+                                        <rect key="frame" x="20" y="145" width="132" height="30"/>
+                                        <fontDescription key="fontDescription" name="LouisGeorgeCafe-Bold" family="Louis George Cafe" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fromAction:" destination="0RT-bc-UQu" eventType="touchUpInside" id="2F6-Pi-h7L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qWJ-zp-xLT" firstAttribute="height" secondItem="8o2-zk-MTq" secondAttribute="height" multiplier="0.545455" id="3mV-T3-Rq4"/>
+                                    <constraint firstItem="8o2-zk-MTq" firstAttribute="height" secondItem="XpF-rI-1ce" secondAttribute="height" multiplier="1:5" id="7Ed-hU-cNy"/>
+                                    <constraint firstItem="yI4-vE-kJl" firstAttribute="leading" secondItem="5dm-1Y-eug" secondAttribute="trailing" constant="15" id="9tO-Is-UnK"/>
+                                    <constraint firstItem="yI4-vE-kJl" firstAttribute="leading" secondItem="qWJ-zp-xLT" secondAttribute="trailing" constant="15" id="ITF-7o-arI"/>
+                                    <constraint firstItem="5dm-1Y-eug" firstAttribute="leading" secondItem="XpF-rI-1ce" secondAttribute="leading" constant="20" id="Kz3-mR-E78"/>
+                                    <constraint firstItem="yI4-vE-kJl" firstAttribute="width" secondItem="XpF-rI-1ce" secondAttribute="width" multiplier="1:2" id="QOa-X3-6vv"/>
+                                    <constraint firstItem="5dm-1Y-eug" firstAttribute="centerY" secondItem="CGi-6J-hcw" secondAttribute="centerY" id="f0a-AB-alb"/>
+                                    <constraint firstAttribute="trailing" secondItem="yI4-vE-kJl" secondAttribute="trailing" constant="20" id="hJf-gW-Ao1"/>
+                                    <constraint firstItem="qWJ-zp-xLT" firstAttribute="centerY" secondItem="8o2-zk-MTq" secondAttribute="centerY" id="hRF-Vy-511"/>
+                                    <constraint firstItem="5dm-1Y-eug" firstAttribute="height" secondItem="CGi-6J-hcw" secondAttribute="height" multiplier="0.545455" id="lc4-ol-3yk"/>
+                                    <constraint firstItem="CGi-6J-hcw" firstAttribute="height" secondItem="XpF-rI-1ce" secondAttribute="height" multiplier="1:5" id="sFm-6P-zbb"/>
+                                    <constraint firstItem="yI4-vE-kJl" firstAttribute="centerY" secondItem="XpF-rI-1ce" secondAttribute="centerY" constant="-15" id="tUB-mH-WDq"/>
+                                    <constraint firstItem="qWJ-zp-xLT" firstAttribute="leading" secondItem="XpF-rI-1ce" secondAttribute="leading" constant="20" id="zHs-uk-6Os"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer. shadowColor">
+                                        <color key="value" red="0.0" green="0.52941176470588236" blue="0.95294117647058818" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.23000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6y-Zz-vr3">
+                                <rect key="frame" x="104" y="496.5" width="206" height="60"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.56862745098039214" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VNV-Pq-IfD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LouisGeorgeCafe-Bold" family="Louis George Cafe" pointSize="18"/>
+                                <state key="normal" title="CONVERT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.52941176469999995" blue="0.95294117649999999" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer. shadowColor">
+                                        <color key="value" red="0.0" green="0.52941176469999995" blue="0.95294117649999999" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.23000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertCurrencyAction:" destination="0RT-bc-UQu" eventType="touchUpInside" id="fzg-q4-BaO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hco-gV-0b1">
+                                <rect key="frame" x="0.0" y="564.5" width="414" height="289.5"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SYX-ZY-M6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="289.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hCu-qt-2te">
+                                            <size key="itemSize" width="181" height="188"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeyboardCell" id="XLH-mo-IZM" customClass="KeyboardCell" customModule="CurrencyConverter" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="188"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AlB-Yt-6bM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="188"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dls-g9-hPa">
+                                                            <rect key="frame" x="86.5" y="80.5" width="8" height="27"/>
+                                                            <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Dls-g9-hPa" firstAttribute="centerY" secondItem="AlB-Yt-6bM" secondAttribute="centerY" id="7As-Wt-ymz"/>
+                                                        <constraint firstItem="Dls-g9-hPa" firstAttribute="centerX" secondItem="AlB-Yt-6bM" secondAttribute="centerX" id="gPm-45-DKX"/>
+                                                    </constraints>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="customSize" width="181" height="188"/>
+                                                <connections>
+                                                    <outlet property="digitsLabel" destination="Dls-g9-hPa" id="ag2-B6-gb4"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="0RT-bc-UQu" id="4BS-un-Rjh"/>
+                                            <outlet property="delegate" destination="0RT-bc-UQu" id="4z7-rd-Jmc"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SYX-ZY-M6c" firstAttribute="leading" secondItem="hco-gV-0b1" secondAttribute="leading" id="3aT-Je-576"/>
+                                    <constraint firstAttribute="bottom" secondItem="SYX-ZY-M6c" secondAttribute="bottom" id="AxD-re-wrs"/>
+                                    <constraint firstAttribute="trailing" secondItem="SYX-ZY-M6c" secondAttribute="trailing" id="P9e-ej-QHE"/>
+                                    <constraint firstItem="SYX-ZY-M6c" firstAttribute="top" secondItem="hco-gV-0b1" secondAttribute="top" id="ggS-vX-DGc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rate -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDf-s1-XMk">
+                                <rect key="frame" x="136" y="219" width="142.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer. shadowColor">
+                                        <color key="value" red="0.0" green="0.52941176469999995" blue="0.95294117649999999" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.23000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvS-gy-IQr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can tap me to see the list of exchange rates" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-nZ-8nV">
+                                        <rect key="frame" x="142" y="61" width="200" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ik9-Hu-TXn"/>
+                                            <constraint firstAttribute="width" constant="200" id="aAP-SI-ak5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR3-Wx-kdZ">
+                                <rect key="frame" x="350" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4rT-sk-UJd"/>
+                                    <constraint firstAttribute="width" constant="44" id="zN6-2z-y1O"/>
+                                </constraints>
+                                <state key="normal" image="logo"/>
+                                <connections>
+                                    <action selector="exchangeRate:" destination="0RT-bc-UQu" eventType="touchUpInside" id="Z8F-P6-EOz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OvS-gy-IQr" firstAttribute="leading" secondItem="rP5-HY-adr" secondAttribute="leading" id="55D-L0-hf4"/>
+                            <constraint firstItem="rP5-HY-adr" firstAttribute="trailing" secondItem="rR3-Wx-kdZ" secondAttribute="trailing" constant="20" id="93a-o3-SWQ"/>
+                            <constraint firstItem="dvP-mP-sP2" firstAttribute="leading" secondItem="rP5-HY-adr" secondAttribute="leading" id="AKi-NF-Qqj"/>
+                            <constraint firstItem="rR3-Wx-kdZ" firstAttribute="top" secondItem="rP5-HY-adr" secondAttribute="top" constant="20" id="DoS-Ma-vhP"/>
+                            <constraint firstItem="OvS-gy-IQr" firstAttribute="bottom" secondItem="rP5-HY-adr" secondAttribute="bottom" constant="34" id="EMZ-jY-N7l"/>
+                            <constraint firstItem="XpF-rI-1ce" firstAttribute="height" secondItem="J7L-FQ-2ks" secondAttribute="height" multiplier="0.30692" id="Fbr-t0-lt5"/>
+                            <constraint firstItem="KDf-s1-XMk" firstAttribute="centerX" secondItem="XpF-rI-1ce" secondAttribute="centerX" id="GET-kC-zfi"/>
+                            <constraint firstItem="rP5-HY-adr" firstAttribute="trailing" secondItem="XpF-rI-1ce" secondAttribute="trailing" constant="20" id="JUz-Ub-idf"/>
+                            <constraint firstItem="dvP-mP-sP2" firstAttribute="top" secondItem="rP5-HY-adr" secondAttribute="top" constant="-44" id="LA7-mX-ita"/>
+                            <constraint firstItem="H6y-Zz-vr3" firstAttribute="width" secondItem="XpF-rI-1ce" secondAttribute="width" multiplier="0.55" id="Mw3-c7-Je1"/>
+                            <constraint firstItem="H6y-Zz-vr3" firstAttribute="top" secondItem="XpF-rI-1ce" secondAttribute="bottom" constant="-30" id="O1T-9Y-DYW"/>
+                            <constraint firstItem="rR3-Wx-kdZ" firstAttribute="leading" secondItem="Aer-nZ-8nV" secondAttribute="trailing" constant="8" id="Pm7-hQ-VAz"/>
+                            <constraint firstItem="rP5-HY-adr" firstAttribute="trailing" secondItem="hco-gV-0b1" secondAttribute="trailing" id="Qrk-iq-2a3"/>
+                            <constraint firstItem="hco-gV-0b1" firstAttribute="top" secondItem="H6y-Zz-vr3" secondAttribute="bottom" constant="8" id="XbF-OL-lIs"/>
+                            <constraint firstItem="rP5-HY-adr" firstAttribute="bottom" secondItem="hco-gV-0b1" secondAttribute="bottom" constant="8" id="aoU-NQ-01Q"/>
+                            <constraint firstItem="Aer-nZ-8nV" firstAttribute="centerY" secondItem="rR3-Wx-kdZ" secondAttribute="centerY" id="bOu-Xe-FlQ"/>
+                            <constraint firstItem="dvP-mP-sP2" firstAttribute="height" secondItem="J7L-FQ-2ks" secondAttribute="height" multiplier="0.5" constant="44" id="eEZ-z4-yzh"/>
+                            <constraint firstItem="hco-gV-0b1" firstAttribute="leading" secondItem="rP5-HY-adr" secondAttribute="leading" id="ftI-d1-Lrf"/>
+                            <constraint firstItem="XpF-rI-1ce" firstAttribute="top" secondItem="KDf-s1-XMk" secondAttribute="bottom" constant="10" id="iXU-Oj-BFO"/>
+                            <constraint firstItem="OvS-gy-IQr" firstAttribute="trailing" secondItem="rP5-HY-adr" secondAttribute="trailing" id="igk-4O-POn"/>
+                            <constraint firstItem="H6y-Zz-vr3" firstAttribute="centerX" secondItem="XpF-rI-1ce" secondAttribute="centerX" id="rSl-BW-ES3"/>
+                            <constraint firstItem="XpF-rI-1ce" firstAttribute="leading" secondItem="rP5-HY-adr" secondAttribute="leading" constant="20" id="ws7-PC-4en"/>
+                            <constraint firstItem="XpF-rI-1ce" firstAttribute="centerY" secondItem="dvP-mP-sP2" secondAttribute="centerY" multiplier="1.5:1" constant="20" id="xTs-rP-Eca"/>
+                            <constraint firstItem="dvP-mP-sP2" firstAttribute="trailing" secondItem="rP5-HY-adr" secondAttribute="trailing" id="yQ2-st-bFY"/>
+                            <constraint firstItem="OvS-gy-IQr" firstAttribute="top" secondItem="rP5-HY-adr" secondAttribute="top" constant="-44" id="zbp-x4-DYV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rP5-HY-adr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jHg-Ma-NJ8"/>
+                    <connections>
+                        <outlet property="exchangelabel" destination="KDf-s1-XMk" id="M0w-hm-Vmp"/>
+                        <outlet property="fromBtn" destination="5dm-1Y-eug" id="3XH-eV-fBf"/>
+                        <outlet property="fromCurrencyTF" destination="CGi-6J-hcw" id="rrj-oU-lZy"/>
+                        <outlet property="keyboardContainerView" destination="hco-gV-0b1" id="bX9-65-1ya"/>
+                        <outlet property="onboardingView" destination="OvS-gy-IQr" id="Cx0-87-rAc"/>
+                        <outlet property="tapmeLbl" destination="Aer-nZ-8nV" id="xVz-UD-E84"/>
+                        <outlet property="toBtn" destination="qWJ-zp-xLT" id="yer-ML-K4b"/>
+                        <outlet property="toCurrencyTF" destination="8o2-zk-MTq" id="enq-B6-ikS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2V6-4H-7xO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="-81.696428571428569"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="d1M-vr-JEt">
+            <objects>
+                <viewController storyboardIdentifier="CountryViewController" id="aVd-SM-imk" customClass="CountryViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SIV-JR-ZuF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJc-Ub-1Hl">
+                                <rect key="frame" x="24" y="108" width="366" height="70"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="eye-w0-W8q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LouisGeorgeCafe" family="Louis George Cafe" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer. shadowColor">
+                                        <color key="value" red="0.0" green="0.52941176469999995" blue="0.95294117649999999" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.23000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-4a-V25">
+                                <rect key="frame" x="0.0" y="198" width="414" height="664"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aVd-SM-imk" id="rMm-xr-iR5"/>
+                                    <outlet property="delegate" destination="aVd-SM-imk" id="Yoy-Xq-dbc"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-3W-Mfc">
+                                <rect key="frame" x="20" y="52" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hjB-LJ-D1X"/>
+                                    <constraint firstAttribute="width" constant="46" id="rJG-4d-DvV"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="aVd-SM-imk" eventType="touchUpInside" id="gbG-0V-sLl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SOs-4a-V25" firstAttribute="leading" secondItem="PR4-A0-GEo" secondAttribute="leading" id="3f8-Bi-UCQ"/>
+                            <constraint firstItem="PR4-A0-GEo" firstAttribute="trailing" secondItem="SOs-4a-V25" secondAttribute="trailing" id="HSA-qx-MzG"/>
+                            <constraint firstItem="5fO-3W-Mfc" firstAttribute="top" secondItem="PR4-A0-GEo" secondAttribute="top" constant="8" id="LN0-6i-eku"/>
+                            <constraint firstItem="wJc-Ub-1Hl" firstAttribute="leading" secondItem="PR4-A0-GEo" secondAttribute="leading" constant="24" id="MPf-LH-8Pw"/>
+                            <constraint firstItem="PR4-A0-GEo" firstAttribute="trailing" secondItem="wJc-Ub-1Hl" secondAttribute="trailing" constant="24" id="Tqu-hs-71a"/>
+                            <constraint firstItem="5fO-3W-Mfc" firstAttribute="leading" secondItem="PR4-A0-GEo" secondAttribute="leading" constant="20" id="ZIj-2o-5xq"/>
+                            <constraint firstItem="wJc-Ub-1Hl" firstAttribute="top" secondItem="PR4-A0-GEo" secondAttribute="top" constant="64" id="mfE-Si-ahb"/>
+                            <constraint firstItem="PR4-A0-GEo" firstAttribute="bottom" secondItem="SOs-4a-V25" secondAttribute="bottom" id="x1f-n1-MdB"/>
+                            <constraint firstItem="SOs-4a-V25" firstAttribute="top" secondItem="wJc-Ub-1Hl" secondAttribute="bottom" constant="20" id="ydc-iz-mHe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PR4-A0-GEo"/>
+                    </view>
+                    <connections>
+                        <outlet property="countryListView" destination="SOs-4a-V25" id="D7a-sA-ybn"/>
+                        <outlet property="searchCountry" destination="wJc-Ub-1Hl" id="dS0-NP-HqV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYg-zL-6vR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="-82"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aFD-z5-Aai">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="k1m-Hs-2ga" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kfL-dw-Dxd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HQr-u0-HXH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0RT-bc-UQu" kind="relationship" relationship="rootViewController" id="OHA-DX-d1D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAb-gC-0jf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="-81.696428571428569"/>
+        </scene>
+        <!--Exchange Rate View Controller-->
+        <scene sceneID="LgY-3V-2UG">
+            <objects>
+                <viewController storyboardIdentifier="ExchangeRateViewController" id="LrQ-rG-PSS" customClass="ExchangeRateViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTw-ld-q44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COq-CN-LEU">
+                                <rect key="frame" x="0.0" y="146" width="414" height="716"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LrQ-rG-PSS" id="XMf-4E-KfV"/>
+                                    <outlet property="delegate" destination="LrQ-rG-PSS" id="LVr-KE-OUb"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7t-91-Xxe">
+                                <rect key="frame" x="20" y="52" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Uqw-Es-DSn"/>
+                                    <constraint firstAttribute="height" constant="30" id="VIn-Vc-GPq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="LrQ-rG-PSS" eventType="touchUpInside" id="XQj-3u-rC0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Rates - USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-Dy-iR3">
+                                <rect key="frame" x="106.5" y="56" width="201.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="LouisGeorgeCafe-Bold" family="Louis George Cafe" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rBU-Dy-iR3" firstAttribute="centerY" secondItem="I7t-91-Xxe" secondAttribute="centerY" id="81D-0a-mVH"/>
+                            <constraint firstItem="hMg-EG-ohO" firstAttribute="trailing" secondItem="COq-CN-LEU" secondAttribute="trailing" id="Cu2-Eq-HiT"/>
+                            <constraint firstItem="rBU-Dy-iR3" firstAttribute="centerX" secondItem="tTw-ld-q44" secondAttribute="centerX" id="WLJ-Yi-qXM"/>
+                            <constraint firstItem="I7t-91-Xxe" firstAttribute="leading" secondItem="hMg-EG-ohO" secondAttribute="leading" constant="20" id="b8g-XO-aUf"/>
+                            <constraint firstItem="COq-CN-LEU" firstAttribute="leading" secondItem="hMg-EG-ohO" secondAttribute="leading" id="blh-Wt-Wvi"/>
+                            <constraint firstItem="hMg-EG-ohO" firstAttribute="bottom" secondItem="COq-CN-LEU" secondAttribute="bottom" id="glN-ZK-wzY"/>
+                            <constraint firstItem="COq-CN-LEU" firstAttribute="top" secondItem="I7t-91-Xxe" secondAttribute="bottom" constant="64" id="sly-B6-J6h"/>
+                            <constraint firstItem="I7t-91-Xxe" firstAttribute="top" secondItem="hMg-EG-ohO" secondAttribute="top" constant="8" id="xZ8-aM-cnh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hMg-EG-ohO"/>
+                    </view>
+                    <connections>
+                        <outlet property="listView" destination="COq-CN-LEU" id="Hd2-6K-qXa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOm-nY-k0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2403" y="-82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="22.666666030883789" height="17.333333969116211"/>
+        <image name="logo" width="45.333332061767578" height="45.333332061767578"/>
+        <image name="topBlueBackground" width="620.5" height="604"/>
+    </resources>
+</document>
