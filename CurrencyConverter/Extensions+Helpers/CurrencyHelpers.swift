@@ -13,7 +13,7 @@ protocol CurrencyHelpers {
 
 extension CurrencyHelpers {
     func keyboardButtons() -> [String] {
-        let keyboardButtons : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "•", "⌫"]
+        let keyboardButtons : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "⌫"]
         return keyboardButtons
     }
     
